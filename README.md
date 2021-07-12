@@ -1,6 +1,6 @@
 # macos-user-image
 
-Tested and working on macOS up to and including macOS 12 Monterey Developer Beta 2 [21A5268h].
+Compatible with macOS up to and including macOS 12 Monterey Developer Beta 2 [21A5268h].
 
 ## Purpose
 
