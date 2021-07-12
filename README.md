@@ -1,6 +1,6 @@
 # macos-user-image
 
-Tested and working on macOS upto and inluding macOS 11.0 Big Sur Developer Beta 9 [build 20A5384c]. 
+Tested and working on macOS up to and including macOS 12 Monterey Developer Beta 2 [21A5268h].
 
 ## Purpose
 
