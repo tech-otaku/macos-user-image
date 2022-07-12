@@ -160,8 +160,13 @@ EOF
 # Authenticate user upfront
     sudo -v
 
-# Quit System Preferences
-    killall System\ Preferences 2> /dev/null                        # Write STDERR to /dev/null to supress message if process isn't running
+# Quit System Settings (previously System Preferences prior to macOS Ventura 13)
+    SETTINGS="System Settings"
+    if [[ $(system_profiler SPSoftwareDataType | awk '/System Version/ {print $4}' | cut -d . -f 1) -lt 13 ]]; then
+        SETTINGS="System Preferences"
+    fi
+
+    killall "$SETTINGS" 2> /dev/null                        # Write STDERR to /dev/null to supress message if process isn't running
 
 
 
