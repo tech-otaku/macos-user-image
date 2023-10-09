@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-# AUTHOR: Steve Ward [steve@tech-otaku.com]
+# AUTHOR: Steve Ward [steve at tech-otaku dot com]
 # URL: https://github.com/tech-otaku/macos-user-image.git
-# README: https://github.com/tech-otaku/macos-user-image/blob/master/README.md
+# README: https://github.com/tech-otaku/macos-user-image/blob/main/README.md
 
 
 
@@ -35,7 +35,7 @@
     Options:
     -h                      This help message.
     -i IMAGE_FILE           The image to use. Can be a full or relative path to the image. REQUIRED.
-    -p                      Open the Users & Groups pane of System preferences after the users's image has been changed.
+    -p                      Open the Users & Groups pane of System Settings/Preferences after the user's image has been changed.
     -r                      Revoke user's root privileges when script terminates.
     -u USER_TO_UPDATE       The user whose image to change. REQUIRED.
     
@@ -192,7 +192,10 @@ EOF
 # FINISH UP
 #
 
-# Optionally open the Users & Groups pane of System Preferences 
+# Optionally open the Users & Groups pane of System Settings (previously System Preferences prior to macOS Ventura 13)
     if [ ! -z $PREFS ]; then
+    # All 3 of the commands below achieve the same thing and work with System Settings and System Preferences
         open /System/Library/PreferencePanes/Accounts.prefPane
+#        open "x-apple.systempreferences:com.apple.preferences.users"
+#        open "x-apple.systempreferences:com.apple.Users-Groups-Settings.extension"
     fi
